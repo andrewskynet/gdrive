@@ -38,7 +38,7 @@ func formatSize(bytes int64, forceBytes bool) string {
 		value /= 1000
 		i++
 	}
-	return fmt.Sprintf("%.1f %s", value, units[i])
+	return fmt.Sprintf("%.4f %s", value, units[i])
 }
 
 func calcRate(bytes int64, start, end time.Time) int64 {
