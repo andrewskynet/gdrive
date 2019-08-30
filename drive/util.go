@@ -34,8 +34,8 @@ func formatSize(bytes int64, forceBytes bool) string {
 	var i int
 	value := float64(bytes)
 
-	for value > 1000 {
-		value /= 1000
+	for value > 1024 {
+		value /= 1024
 		i++
 	}
 	return fmt.Sprintf("%.4f %s", value, units[i])
